@@ -23,7 +23,10 @@
             android:clickable="true"
             android:focusable="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/profile1" />
+            android:src="@drawable/profile1"
+            android:foreground="?attr/selectableItemBackground"
+            android:contentDescription="TODO"
+            />
 
         <!-- User Name -->
         <TextView
@@ -65,7 +68,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/image1" />
+            android:src="@drawable/image1"
+            />
 
         <ImageView
             android:layout_width="match_parent"
@@ -87,7 +91,7 @@
         android:layout_height="40dp"
         android:layout_below="@id/view_flipper"
         android:background="#FF0000"
-        android:text="Note : Madat karo meri samjhe nn..."
+        android:text="Note : under development.."
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -100,42 +104,10 @@
         android:scrollHorizontally="true" />
 
     <!-- Footer Navigation -->
-    <LinearLayout
-        android:id="@+id/footer_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="#EEEEEE"
-        android:gravity="center">
-
-        <ImageView
-            android:id="@+id/home_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/home"
-            android:padding="10dp"
-            android:layout_weight="1" />
-
-
-        <ImageView
-            android:id="@+id/notice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="openNoticePage"
-            android:padding="10dp"
-            android:src="@drawable/notice" />
-
-        <ImageView
-            android:id="@+id/calendar_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/calender"
-            android:padding="10dp"
-            android:layout_weight="1"
-            android:onClick="openCalenderPage"
-            />
-    </LinearLayout>
+    <include
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        layout="@layout/footer_navigation"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

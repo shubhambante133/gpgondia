@@ -1,6 +1,5 @@
 package com.example.gpgondia;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +22,7 @@ public class StudentDetailsActivity extends AppCompatActivity {
         String enrollment = getIntent().getStringExtra("Enrollment");
         String branch = getIntent().getStringExtra("Branch");
         String email = getIntent().getStringExtra("Email");
-        String mobile = getIntent().getStringExtra("Mobile");  // Integer hata ke String use karo
+        String mobile = getIntent().getStringExtra("Mobile");
 
         // Set Data
         studentName.setText(" " + name);
