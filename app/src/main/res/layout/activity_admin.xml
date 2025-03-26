@@ -1,219 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgraund4">
-
-    <!-- Back Button Layout -->
-    <ImageButton
-        android:id="@+id/back_button"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/backbutton"
-        android:contentDescription="Back"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="@color/material_on_surface_stroke" />
-
-    <!-- Event Title -->
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/backgraund4"
+    >
+    <!-- Event Heading -->
     <TextView
-        android:id="@+id/event_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EVENTS"
+        android:text="Admin Panel"
         android:textStyle="bold|italic"
         android:textSize="40sp"
         android:textColor="#000000"
         android:gravity="center"
-        android:layout_below="@id/back_button"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:shadowColor="#ffffff"
         android:shadowDx="4"
         android:shadowDy="4"
         android:shadowRadius="10" />
 
-    <!-- Event Boxes Layout -->
+    <!-- Event Boxes Container -->
     <GridLayout
-        android:id="@+id/event_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/event_title"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom"
         android:columnCount="2"
-        android:padding="16dp">
-
-        <!-- Sports Box -->
+        android:rowCount="2"
+        android:layout_marginTop="100dp"
+        >
+        <!-- Event Boxes -->
         <LinearLayout
             android:id="@+id/sport"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/border_black"
+            android:elevation="6dp"
             android:orientation="vertical"
             android:padding="16dp"
             android:clickable="true"
             android:focusable="true"
-            android:gravity="center"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            >
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/sports"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:src="@drawable/sports" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="SPORTS"
                 android:textColor="#00a1e9"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center" />
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Conference Box -->
         <LinearLayout
-            android:id="@+id/conference"
+            android:id="@+id/Conference"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/border_black"
+            android:elevation="6dp"
             android:orientation="vertical"
             android:padding="16dp"
             android:clickable="true"
             android:focusable="true"
-            android:gravity="center"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            >
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/conference"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:src="@drawable/conference" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="CONFERENCE"
                 android:textColor="#00a1e9"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center" />
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Cultural Box -->
         <LinearLayout
-            android:id="@+id/cultural"
+            android:id="@+id/Cultural"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/border_black"
+            android:elevation="6dp"
             android:orientation="vertical"
             android:padding="16dp"
             android:clickable="true"
             android:focusable="true"
-            android:gravity="center"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            >
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/culture"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:src="@drawable/culture" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="CULTURAL"
                 android:textColor="#00a1e9"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center" />
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Placement Box -->
         <LinearLayout
-            android:id="@+id/placement"
+            android:id="@+id/Placement"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/border_black"
+            android:elevation="6dp"
             android:orientation="vertical"
             android:padding="16dp"
             android:clickable="true"
             android:focusable="true"
-            android:gravity="center"
             android:foreground="?attr/selectableItemBackground">
-
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/placement"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:src="@drawable/placement" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="PLACEMENT"
                 android:textColor="#00a1e9"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center" />
+                android:textStyle="bold" />
         </LinearLayout>
+
     </GridLayout>
 
-    <!-- Bottom Navigation -->
     <LinearLayout
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="#FFFFFF">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
 
-        <ImageView
-            android:id="@+id/home_icon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/home"
-            android:padding="10dp"
-            android:background="@drawable/border_black"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Home" />
-
-        <ImageView
-            android:id="@+id/notice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/notice"
-            android:padding="10dp"
-            android:background="@drawable/border_black"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Notice" />
-
-        <ImageView
-            android:id="@+id/calendar_icon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/calender"
-            android:padding="10dp"
-            android:background="@drawable/border_black"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Calendar" />
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

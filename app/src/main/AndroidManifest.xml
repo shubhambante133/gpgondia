@@ -14,7 +14,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".loginform"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +22,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StudentDetailsActivity" />
-        <activity android:name=".NoticeActivity" />
-        <activity android:name=".CalenderActivity" />
-
         <activity
-            android:name=".IbuttonActivity"
-            tools:ignore="Instantiatable" />
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".culturaladmin"
+            android:exported="false" />
+        <activity
+            android:name=".conferenceadmin"
+            android:exported="false" />
+        <activity
+            android:name=".placementadmin"
+            android:exported="false" />
+        <activity
+            android:name=".sportactivityadmin"
+            android:exported="false" />
     </application>
 
 </manifest>

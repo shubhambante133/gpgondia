@@ -4,10 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/backgraund4"
-    >
-
-
+    android:background="@drawable/backgraund4">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,17 +32,15 @@
         android:textSize="40sp"
         android:textColor="#000000"
         android:gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:shadowColor="#ffffff"
         android:shadowDx="4"
         android:shadowDy="4"
         android:shadowRadius="10" />
-
-
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="110dp"
         android:columnCount="2"
         android:padding="16dp"
         android:rowCount="3">
@@ -69,12 +64,12 @@
                 android:src="@drawable/co" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:gravity="center"
                 android:text="Computer Engineering"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -97,12 +92,12 @@
                 android:src="@drawable/information" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:gravity="center"
                 android:text="Information Technology"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -125,12 +120,12 @@
                 android:src="@drawable/machanical1" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:gravity="center"
                 android:text="Mechanical Engineering"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -153,12 +148,12 @@
                 android:src="@drawable/ej" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:gravity="center"
                 android:text="Electronics Telecommunication"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -181,12 +176,12 @@
                 android:src="@drawable/ee" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:gravity="center"
                 android:text="Electrical Engineering"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -209,69 +204,59 @@
                 android:src="@drawable/civil3" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:gravity="center"
                 android:text="Civil Engineering"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
     </GridLayout>
-
+    <!-- Bottom Navigation -->
     <LinearLayout
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:layout_marginBottom="3dp"
-        android:layout_gravity="bottom">
+        android:background="#FFFFFF">
 
         <ImageView
             android:id="@+id/home_icon"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:src="@drawable/home"
             android:padding="10dp"
-            android:layout_weight="1"
             android:background="@drawable/border_black"
-            android:layout_marginLeft="5dp"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:contentDescription="TODO"/>
+            android:contentDescription="Home" />
 
         <ImageView
             android:id="@+id/notice"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="openNoticePage"
-            android:padding="10dp"
             android:src="@drawable/notice"
+            android:padding="10dp"
             android:background="@drawable/border_black"
-            android:layout_marginLeft="5dp"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:contentDescription="TODO"/>
+            android:contentDescription="Notice" />
 
         <ImageView
             android:id="@+id/calendar_icon"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:src="@drawable/calender"
             android:padding="10dp"
-            android:layout_weight="1"
-            android:onClick="openCalenderPage"
             android:background="@drawable/border_black"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:contentDescription="TODO"/>
+            android:contentDescription="Calendar" />
     </LinearLayout>
-
 </RelativeLayout>

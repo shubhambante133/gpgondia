@@ -102,60 +102,50 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:scrollHorizontally="true" />
-
+    <!-- Bottom Navigation -->
     <LinearLayout
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:layout_marginBottom="3dp"
-        android:layout_gravity="bottom">
+        android:background="#FFFFFF">
 
         <ImageView
             android:id="@+id/home_icon"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:src="@drawable/home"
             android:padding="10dp"
-            android:layout_weight="1"
             android:background="@drawable/border_black"
-            android:layout_marginLeft="5dp"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:contentDescription="TODO"/>
+            android:contentDescription="Home" />
 
         <ImageView
             android:id="@+id/notice"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="openNoticePage"
-            android:padding="10dp"
             android:src="@drawable/notice"
+            android:padding="10dp"
             android:background="@drawable/border_black"
-            android:layout_marginLeft="5dp"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:contentDescription="TODO"/>
+            android:contentDescription="Notice" />
 
         <ImageView
             android:id="@+id/calendar_icon"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:src="@drawable/calender"
             android:padding="10dp"
-            android:layout_weight="1"
-            android:onClick="openCalenderPage"
             android:background="@drawable/border_black"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:contentDescription="TODO"/>
+            android:contentDescription="Calendar" />
     </LinearLayout>
-
 
 </RelativeLayout>

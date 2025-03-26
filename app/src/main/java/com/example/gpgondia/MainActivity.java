@@ -26,20 +26,14 @@ public class MainActivity extends AppCompatActivity {
         ImageView calendarIcon = findViewById(R.id.calendar_icon); // Calendar Icon
         ImageView discription = findViewById(R.id.discription);
 
-        // Naam set karo
         userName.setText("Shubham Kailash Bante");
 
-        // Profile image set karo
         profileImage.setImageResource(R.drawable.student_profile);
 
-        // Auto image flipping start karo
-        viewFlipper.setFlipInterval(1000); // 1 second me image change
+        viewFlipper.setFlipInterval(1000);
         viewFlipper.startFlipping();
-
-        // Marquee activate karo
         marqueeText.setSelected(true);
 
-        // Profile image pe click karne se new page open hoga
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,11 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("Email", "admin123@gmail.com");
                 intent.putExtra("Mobile", "9764766351");
 
-                startActivity(intent); // New page open karo
+                startActivity(intent);
             }
         });
 
-        // Calendar Icon pe click karne se CalenderActivity open hogi
         calendarIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Notice icon pe click karne se NoticeActivity open hogi
         noticeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,17 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        discription.setOnClickListener(v -> {
-            loadFragment(new IbuttonActivity());
-        });
     }
 
-    private void loadFragment(IbuttonActivity fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.discription, fragment); // Make sure R.id.fragment_container exists in XML
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }
 }
 
