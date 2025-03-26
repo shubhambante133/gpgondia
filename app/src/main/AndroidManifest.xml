@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GpGondia"
         tools:targetApi="31">
-
         <activity
             android:name=".loginform"
             android:exported="true">
@@ -35,9 +34,6 @@
             android:name=".NoticeActivity"
             android:exported="false" />
         <activity
-            android:name=".CalenderActivity"
-            android:exported="false" />
-        <activity
             android:name=".culturaladmin"
             android:exported="false" />
         <activity
@@ -49,6 +45,8 @@
         <activity
             android:name=".sportactivityadmin"
             android:exported="false" />
+        <activity android:name=".CalenderActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
