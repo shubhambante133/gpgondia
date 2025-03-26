@@ -1,28 +1,30 @@
 package com.example.gpgondia;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CalenderActivity extends AppCompatActivity {
-
-    ImageView btnClose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calender);
 
-        // Back Button (Close Activity)
-        btnClose = findViewById(R.id.back_button);
-        btnClose.setOnClickListener(new View.OnClickListener() {
+
+        // Find the back button
+        TextView backButton = findViewById(R.id.back_button);
+
+        // Set click listener to navigate back
+        backButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
-                finish(); // Closes the activity
+                onBackPressed(); // Go back to the previous activity
             }
         });
+
     }
 }
