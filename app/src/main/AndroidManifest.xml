@@ -13,6 +13,27 @@
         android:theme="@style/Theme.GpGondia"
         tools:targetApi="31">
         <activity
+            android:name=".Registerform"
+            android:exported="false" />
+        <activity
+            android:name=".CEtimetable"
+            android:exported="false" />
+        <activity
+            android:name=".MEtimetable"
+            android:exported="false" />
+        <activity
+            android:name=".EEtimetable"
+            android:exported="false" />
+        <activity
+            android:name=".EJtimetable"
+            android:exported="false" />
+        <activity
+            android:name=".COtimetable"
+            android:exported="false" />
+        <activity
+            android:name=".iftimetable"
+            android:exported="false" />
+        <activity
             android:name=".loginform"
             android:exported="true">
             <intent-filter>
@@ -45,8 +66,9 @@
         <activity
             android:name=".sportactivityadmin"
             android:exported="false" />
-        <activity android:name=".CalenderActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".CalenderActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

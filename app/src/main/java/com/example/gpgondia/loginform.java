@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +45,17 @@ public class loginform extends AppCompatActivity {
                         startActivity(new Intent(loginform.this, admin.class));
                     }
                 }
+            }
+        });
+        TextView registerformSection = findViewById(R.id.registerTextView);
+
+        // Set the OnClickListener to open COtimetable when clicked
+        registerformSection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the EJtimetable activity
+                Intent intent = new Intent(loginform.this, Registerform.class);
+                startActivity(intent);
             }
         });
     }
