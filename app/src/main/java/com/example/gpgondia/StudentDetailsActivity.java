@@ -1,34 +1,38 @@
 package com.example.gpgondia;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StudentDetailsActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_student_detail);  // Ensure this XML exists
+        setContentView(R.layout.activity_student_detail); // Ensure you have this layout
 
-        // Reference TextViews
-        TextView studentName = findViewById(R.id.student_name);
-        TextView studentEnrollment = findViewById(R.id.student_Enrollment_no);
-        TextView studentBranch = findViewById(R.id.student_branch);
-        TextView studentEmail = findViewById(R.id.student_email);
-        TextView studentMobile = findViewById(R.id.student_mobile);
+        // Find the back button
+        TextView backButton = findViewById(R.id.back_button);
+        ImageView backButton2 = findViewById(R.id.back_button2);
 
-        // Get Data from Intent
-        String name = getIntent().getStringExtra("name");
-        String enrollment = getIntent().getStringExtra("Enrollment");
-        String branch = getIntent().getStringExtra("Branch");
-        String email = getIntent().getStringExtra("Email");
-        String mobile = getIntent().getStringExtra("Mobile");
 
-        // Set Data
-        studentName.setText(" " + name);
-        studentEnrollment.setText("Enrollment: " + enrollment);
-        studentBranch.setText("Branch: " + branch);
-        studentEmail.setText("Email: " + email);
-        studentMobile.setText("Mobile: " + mobile);
+        // Set click listener to navigate back
+        backButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Go back to the previous activity
+            }
+        });
+        backButton2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Go back to the previous activity
+            }
+        });
+
     }
 }
