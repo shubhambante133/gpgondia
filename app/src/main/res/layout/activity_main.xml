@@ -29,24 +29,24 @@
             />
 
         <!-- User Name -->
+
+        <!-- Three-Line Menu Icon -->
         <TextView
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Shubham Kailash Bante"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <!-- Three-Line Menu Icon -->
         <ImageView
             android:id="@+id/discription"
             android:layout_width="50dp"
             android:layout_height="36dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="100dp"
             android:clickable="true"
             android:contentDescription="Menu Icon"
             android:focusable="true"

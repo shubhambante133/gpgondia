@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.gpgondia" />
+                  <option name="mobileSdkAppId" value="1:215466153636:android:790fec9fa9b26447803831" />
+                  <option name="projectId" value="gpgondia-635a7" />
+                  <option name="projectNumber" value="215466153636" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

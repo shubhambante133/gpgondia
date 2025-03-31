@@ -64,7 +64,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:text="Shubham Bante"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -89,9 +88,10 @@
         android:layout_marginBottom="50dp">
 
         <TextView
+            android:id="@+id/enrollment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enroll No : 24412311226"
+            android:text="Enroll No : "
             android:textColor="#000000"
             android:textSize="16sp"
             android:textStyle="bold"/>
@@ -104,9 +104,10 @@
             android:layout_marginBottom="8dp"/>
 
         <TextView
+            android:id="@+id/phoneno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Phone No: 9322xxxxxx86"
+            android:text="Phone No: "
             android:textColor="#000000"
             android:textStyle="bold"
             android:textSize="16sp" />
@@ -119,9 +120,10 @@
             android:layout_marginBottom="8dp"/>
 
         <TextView
+            android:id="@+id/branch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Course: Information Technology"
+            android:text="Branch: "
             android:textStyle="bold"
             android:textColor="#000000"
             android:textSize="16sp" />
