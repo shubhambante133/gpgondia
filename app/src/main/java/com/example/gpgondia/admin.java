@@ -12,7 +12,7 @@ public class admin extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
 
         findViewById(R.id.sport).setOnClickListener(view ->
-                startActivity(new Intent(admin.this, sportactivityadmin.class))
+                startActivity(new Intent(admin.this, sportsactivityadmin.class))
         );
 
         findViewById(R.id.Conference).setOnClickListener(view ->

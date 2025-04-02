@@ -1,19 +1,36 @@
 package com.example.gpgondia;
 
+import android.net.Uri;
+
 public class ChatMessage {
     private String message;
-    private boolean isUser; // true for user, false for bot
+    private Uri imageUri;
 
-    public ChatMessage(String message, boolean isUser) {
+    // Constructor for text messages
+    public ChatMessage(String message) {
         this.message = message;
-        this.isUser = isUser;
+        this.imageUri = null;
+    }
+
+    // Constructor for image messages
+    public ChatMessage(Uri imageUri) {
+        this.message = null;
+        this.imageUri = imageUri;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public boolean isUser() {
-        return isUser;
+    public Uri getImageUri() {
+        return imageUri;
+    }
+
+    public boolean hasImage() {
+        return imageUri != null;
+    }
+
+    public boolean hasText() {
+        return message != null && !message.isEmpty();
     }
 }
