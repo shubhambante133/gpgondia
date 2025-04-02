@@ -3,20 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgraund4">
-
-    <!-- Back Button Layout -->
-    <ImageButton
-        android:id="@+id/back_button"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/backbutton"
-        android:contentDescription="Back"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="@color/material_on_surface_stroke" />
+    android:background="@drawable/backgraund4"
+    android:padding="20dp">
 
     <!-- Event Title -->
     <TextView
@@ -28,7 +16,6 @@
         android:textSize="40sp"
         android:textColor="#000000"
         android:gravity="center"
-        android:layout_below="@id/back_button"
         android:layout_marginTop="12dp"
         android:shadowColor="#ffffff"
         android:shadowDx="4"
