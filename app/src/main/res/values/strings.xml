@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">gp gondia</string>
-        <string name="student_registration">Student Registration</string>
-        <string name="name">Name</string>
-        <string name="enrollment_no">Enrollment No.</string>
-        <string name="branch">Branch</string>
-        <string name="year">Year</string>
-        <string name="dob">Date of Birth (DD/MM/YYYY)</string>
-        <string name="mobile_no">Mobile No.</string>
-        <string name="email">Email</string>
-        <string name="password">Password</string>
-        <string name="re_enter_password">Re-enter Password</string>
-        <string name="register">Register</string>
-        <array name="branch_array">branch_array</array>
+    <string name="student_registration">Student Registration</string>
+    <string name="name">Name</string>
+    <string name="enrollment_no">Enrollment No.</string>
+    <string name="branch">Branch</string>
+    <string name="year">Year</string>
+    <string name="dob">Date of Birth (DD/MM/YYYY)</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="register">Register</string>
+    <array name="branch_array">branch_array</array>
 
 </resources>

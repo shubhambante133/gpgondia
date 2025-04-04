@@ -14,15 +14,12 @@ public class admin extends AppCompatActivity {
         findViewById(R.id.sport).setOnClickListener(view ->
                 startActivity(new Intent(admin.this, sportsactivityadmin.class))
         );
-
         findViewById(R.id.Conference).setOnClickListener(view ->
                 startActivity(new Intent(admin.this, conferenceadmin.class))
         );
-
         findViewById(R.id.Cultural).setOnClickListener(view ->
                 startActivity(new Intent(admin.this, culturaladmin.class))
         );
-
         findViewById(R.id.Placement).setOnClickListener(view ->
                 startActivity(new Intent(admin.this, placementadmin.class))
         );

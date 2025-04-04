@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgraund4"
-    android:padding="20dp">
+    android:background="@drawable/backgraund4">
 
     <!-- Event Title -->
     <TextView
@@ -28,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/event_title"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
         android:columnCount="2"
         android:padding="16dp">
 
@@ -48,6 +47,7 @@
             android:foreground="?attr/selectableItemBackground">
 
             <ImageView
+                android:id="@+id/sports"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/sports"
@@ -156,51 +156,5 @@
                 android:layout_gravity="center" />
         </LinearLayout>
     </GridLayout>
-
-    <!-- Bottom Navigation -->
-    <LinearLayout
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="#FFFFFF">
-
-        <ImageView
-            android:id="@+id/home_icon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/home"
-            android:padding="10dp"
-            android:background="@drawable/border_black"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Home" />
-
-        <ImageView
-            android:id="@+id/notice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/notice"
-            android:padding="10dp"
-            android:background="@drawable/border_black"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Notice" />
-
-        <ImageView
-            android:id="@+id/calendar_icon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/calender"
-            android:padding="10dp"
-            android:background="@drawable/border_black"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Calendar" />
-    </LinearLayout>
 
 </RelativeLayout>
