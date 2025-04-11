@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
     private ViewFlipper viewFlipper;
     private TextView userName;
-    private ImageView profileImage, noticeIcon, calendarIcon, descriptionIcon;
+    private ImageView profileImage, noticeIcon, descriptionIcon;
 
     // Firebase Database Reference
     private DatabaseReference databaseReference;
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         viewFlipper = findViewById(R.id.view_flipper);
         TextView marqueeText = findViewById(R.id.marquee_text); // Scrolling text
         noticeIcon = findViewById(R.id.notice); // Notice icon
-        calendarIcon = findViewById(R.id.calendar_icon); // Calendar icon
         descriptionIcon = findViewById(R.id.discription);
 
         // Set default profile image
@@ -68,16 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        // Open CalendarActivity
-        calendarIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CalenderActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // Open NoticeActivity
         noticeIcon.setOnClickListener(new View.OnClickListener() {
             @Override

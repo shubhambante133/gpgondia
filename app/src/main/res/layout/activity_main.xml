@@ -27,10 +27,6 @@
             android:foreground="?attr/selectableItemBackground"
             android:contentDescription="TODO"
             />
-
-        <!-- User Name -->
-
-        <!-- Three-Line Menu Icon -->
         <TextView
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
@@ -44,9 +40,7 @@
             android:id="@+id/discription"
             android:layout_width="50dp"
             android:layout_height="36dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="270dp"
             android:clickable="true"
             android:contentDescription="Menu Icon"
             android:focusable="true"
@@ -106,7 +100,7 @@
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:background="#FFFFFF">
@@ -134,18 +128,6 @@
             android:clickable="true"
             android:focusable="true"
             android:contentDescription="Notice" />
-
-        <ImageView
-            android:id="@+id/calendar_icon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/calender"
-            android:padding="10dp"
-            android:background="@drawable/border_black"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Calendar" />
     </LinearLayout>
 
 </RelativeLayout>

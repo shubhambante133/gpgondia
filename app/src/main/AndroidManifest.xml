@@ -14,66 +14,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GpGondia"
         tools:targetApi="31">
+
+        <!-- ✅ Set SplashScreen as launcher activity -->
         <activity
-            android:name=".sportstudent"
-            android:exported="false" />
-        <activity
-            android:name=".Registerform"
-            android:exported="false" />
-        <activity
-            android:name=".CEtimetable"
-            android:exported="false" />
-        <activity
-            android:name=".MEtimetable"
-            android:exported="false" />
-        <activity
-            android:name=".EEtimetable"
-            android:exported="false" />
-        <activity
-            android:name=".EJtimetable"
-            android:exported="false" />
-        <activity
-            android:name=".COtimetable"
-            android:exported="false" />
-        <activity
-            android:name=".iftimetable"
-            android:exported="false" />
-        <activity
-            android:name=".loginform"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".admin"
-            android:exported="false" />
-        <activity
-            android:name=".StudentDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NoticeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".sportsactivityadmin"
-            android:exported="false" />
-        <activity
-            android:name=".culturaladmin"
-            android:exported="false" />
-        <activity
-            android:name=".placementadmin"
-            android:exported="false" />
-        <activity
-            android:name=".conferenceadmin"
-            android:exported="false" />
-        <activity
-            android:name=".CalenderActivity"
-            android:exported="false" />
+
+        <activity android:name=".sportstudent" android:exported="false" />
+        <activity android:name=".Registerform" android:exported="false" />
+
+        <!-- ❌ Removed LAUNCHER intent-filter from here -->
+        <activity android:name=".loginform" android:exported="false" />
+
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".admin" android:exported="false" />
+        <activity android:name=".StudentDetailsActivity" android:exported="false" />
+        <activity android:name=".NoticeActivity" android:exported="false" />
+        <activity android:name=".sportsactivityadmin" android:exported="false" />
+        <activity android:name=".culturaladmin" android:exported="false" />
+        <activity android:name=".placementadmin" android:exported="false" />
+        <activity android:name=".conferenceadmin" android:exported="false" />
+
     </application>
 
 </manifest>
