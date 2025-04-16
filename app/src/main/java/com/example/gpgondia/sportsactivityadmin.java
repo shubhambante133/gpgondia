@@ -11,11 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,26 +36,26 @@ public class sportsactivityadmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sportactivityadmin);
 
-        // Initialize Firebase
+
         firestore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference("chat_images");
 
-        // Initialize UI components
+
         recyclerView = findViewById(R.id.recyclerView);
         editTextMessage = findViewById(R.id.editTextMessage);
         buttonSend = findViewById(R.id.buttonSend);
         buttonAttach = findViewById(R.id.buttonAttach);
 
-        // Initialize RecyclerView
+
         chatMessages = new ArrayList<>();
         chatAdapter = new ChatAdapter(this, chatMessages);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(chatAdapter);
 
-        // Send button click listener
+
         buttonSend.setOnClickListener(v -> sendMessage());
 
-        // Attach button click listener
+
         buttonAttach.setOnClickListener(v -> openFileChooser());
     }
 
@@ -112,8 +110,9 @@ public class sportsactivityadmin extends AppCompatActivity {
                                                 recyclerView.scrollToPosition(chatMessages.size() - 1);
                                             })
                                             .addOnFailureListener(e -> {
-                                                Log.e("Firestore", "Failed to save image message", e);
+                                                Log.e("Firestore", "Failed to save image message: " + e.getMessage(), e);
                                             });
+
                                 })
                                 .addOnFailureListener(e -> {
                                     Log.e("DownloadURL", "Failed to get image URL", e);

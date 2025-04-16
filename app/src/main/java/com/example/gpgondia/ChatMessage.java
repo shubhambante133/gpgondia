@@ -28,18 +28,43 @@ public class ChatMessage {
     }
 
     // Getters and Setters
-    public String getMessage() { return message; }
-    public void setMessage(String message) { this.message = message; }
+    public String getMessage() {
+        return message;
+    }
 
-    public String getImageUrl() { return imageUrl; }
-    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
-    public long getTimestamp() { return timestamp; }
-    public void setTimestamp(long timestamp) { this.timestamp = timestamp; }
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
-    public String getSender() { return sender; }
-    public void setSender(String sender) { this.sender = sender; }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
-    public boolean isImage() { return isImage; }
-    public void setImage(boolean image) { isImage = image; }
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    public boolean isImage() {
+        return isImage;
+    }
+
+    public void setImage(boolean image) {
+        isImage = image;
+    }
 }

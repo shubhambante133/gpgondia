@@ -12,7 +12,7 @@
         android:id="@+id/logoImageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/college"
+        android:src="@drawable/logo"
         android:layout_marginTop="70dp" />
 
     <TextView

@@ -1,22 +1,24 @@
 package com.example.gpgondia;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.List;
 
-public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-    private static final int VIEW_TYPE_TEXT = 0;
-    private static final int VIEW_TYPE_IMAGE = 1;
+public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder> {
 
     private Context context;
     private List<ChatMessage> chatMessages;
@@ -26,40 +28,28 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         this.chatMessages = chatMessages;
     }
 
+    @NonNull
     @Override
-    public int getItemViewType(int position) {
-        // Return the type of message (text or image)
-        ChatMessage chatMessage = chatMessages.get(position);
-        return chatMessage.getMessage() != null ? VIEW_TYPE_TEXT : VIEW_TYPE_IMAGE;
+    public ChatViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.chat_item, parent, false);
+        return new ChatViewHolder(view);
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
+    public void onBindViewHolder(@NonNull ChatViewHolder holder, int position) {
+        ChatMessage message = chatMessages.get(position);
 
-        if (viewType == VIEW_TYPE_TEXT) {
-            // Inflate the layout for text message
-            View view = inflater.inflate(R.layout.chat_item, parent, false);
-            return new TextMessageViewHolder(view);
+        if (message.isImage()) {
+            holder.textView.setVisibility(View.GONE);
+            holder.imageView.setVisibility(View.VISIBLE);
+
+            // Load image from URL
+            new DownloadImageTask(holder.imageView).execute(message.getImageUrl());
+
         } else {
-            // Inflate the layout for image message
-            View view = inflater.inflate(R.layout.chat_item, parent, false);
-            return new ImageMessageViewHolder(view);
-        }
-    }
-
-    @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ChatMessage chatMessage = chatMessages.get(position);
-
-        if (holder instanceof TextMessageViewHolder) {
-            // Bind text message
-            TextMessageViewHolder textHolder = (TextMessageViewHolder) holder;
-            textHolder.textViewMessage.setText(chatMessage.getMessage());
-        } else if (holder instanceof ImageMessageViewHolder) {
-            // Bind image message
-            ImageMessageViewHolder imageHolder = (ImageMessageViewHolder) holder;
-            Glide.with(context).load(chatMessage.getImageUrl()).into(imageHolder.imageViewMessage);
+            holder.imageView.setVisibility(View.GONE);
+            holder.textView.setVisibility(View.VISIBLE);
+            holder.textView.setText(message.getMessage());
         }
     }
 
@@ -68,23 +58,47 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return chatMessages.size();
     }
 
-    // ViewHolder for text messages
-    static class TextMessageViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewMessage;
+    public static class ChatViewHolder extends RecyclerView.ViewHolder {
+        TextView textView;
+        ImageView imageView;
 
-        TextMessageViewHolder(View itemView) {
+        public ChatViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewMessage = itemView.findViewById(R.id.textMessage);
+            textView = itemView.findViewById(R.id.textMessage);
+            imageView = itemView.findViewById(R.id.imageMessage);
         }
     }
 
-    // ViewHolder for image messages
-    static class ImageMessageViewHolder extends RecyclerView.ViewHolder {
-        ImageView imageViewMessage;
+    // Helper class to download image
+    private static class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+        ImageView imageView;
 
-        ImageMessageViewHolder(View itemView) {
-            super(itemView);
-            imageViewMessage = itemView.findViewById(R.id.imageMessage);
+        public DownloadImageTask(ImageView imageView) {
+            this.imageView = imageView;
+        }
+
+        @Override
+        protected Bitmap doInBackground(String... urls) {
+            String imageUrl = urls[0];
+            Bitmap bitmap = null;
+            try {
+                URL url = new URL(imageUrl);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setDoInput(true);
+                connection.connect();
+                InputStream input = connection.getInputStream();
+                bitmap = BitmapFactory.decodeStream(input);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return bitmap;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            if (bitmap != null) {
+                imageView.setImageBitmap(bitmap);
+            }
         }
     }
 }
