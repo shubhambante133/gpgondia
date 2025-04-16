@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">gp gondia</string>
+    <string name="app_name">GPG Alerts</string>
     <string name="student_registration">Student Registration</string>
     <string name="name">Name</string>
     <string name="enrollment_no">Enrollment No.</string>

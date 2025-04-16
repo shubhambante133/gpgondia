@@ -4,9 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <meta-data
         android:name="com.google.firebase.messaging.default_notification_icon"
         android:resource="@drawable/home" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,30 +19,57 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GpGondia"
         tools:targetApi="31">
-
-        <!-- ✅ Set SplashScreen as launcher activity -->
         <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".sportstudent" android:exported="false" />
-        <activity android:name=".Registerform" android:exported="false" />
-
-        <!-- ❌ Removed LAUNCHER intent-filter from here -->
-        <activity android:name=".loginform" android:exported="false" />
-
-        <activity android:name=".MainActivity" android:exported="false" />
-        <activity android:name=".admin" android:exported="false" />
-        <activity android:name=".StudentDetailsActivity" android:exported="false" />
-        <activity android:name=".NoticeActivity" android:exported="false" />
-        <activity android:name=".sportsactivityadmin" android:exported="false" />
-
-
+        <activity
+            android:name=".Registerform"
+            android:exported="false" /> <!-- ❌ Removed LAUNCHER intent-filter from here -->
+        <activity
+            android:name=".loginform"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sportsactivityadmin"
+            android:exported="false" />
+        <activity
+            android:name=".Placementactivityadmin"
+            android:exported="false" />
+        <activity
+            android:name=".Culturalactivityadmin"
+            android:exported="false" />
+        <activity
+            android:name=".Conferenceactivityadmin"
+            android:exported="false" />
+        <activity
+            android:name=".sportstudent"
+            android:exported="false" />
+        <activity
+            android:name=".conferencestudent"
+            android:exported="false" />
+        <activity
+            android:name=".culturalstudent"
+            android:exported="false" />
+        <activity
+            android:name=".placementstudent"
+            android:exported="false" />
     </application>
 
 </manifest>

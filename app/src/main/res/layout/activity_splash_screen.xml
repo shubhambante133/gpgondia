@@ -19,7 +19,7 @@
         android:layout_below="@id/splash_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Gp Gondia"
+        android:text="GPG Alerts"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />

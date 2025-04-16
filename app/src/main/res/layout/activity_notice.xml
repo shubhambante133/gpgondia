@@ -47,7 +47,6 @@
             android:foreground="?attr/selectableItemBackground">
 
             <ImageView
-                android:id="@+id/sports"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/sports"
