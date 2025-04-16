@@ -1,36 +1,45 @@
 package com.example.gpgondia;
 
-import android.net.Uri;
-
 public class ChatMessage {
     private String message;
-    private Uri imageUri;
+    private String imageUrl;
+    private long timestamp;
+    private String sender;
+    private boolean isImage; // ✅ This was missing
+
+    public ChatMessage() {
+        // Required for Firestore
+    }
 
     // Constructor for text messages
-    public ChatMessage(String message) {
+    public ChatMessage(String message, String sender) {
         this.message = message;
-        this.imageUri = null;
+        this.sender = sender;
+        this.timestamp = System.currentTimeMillis();
+        this.isImage = false;
     }
 
     // Constructor for image messages
-    public ChatMessage(Uri imageUri) {
-        this.message = null;
-        this.imageUri = imageUri;
+    public ChatMessage(String imageUrl, boolean isImage, String sender) {
+        this.imageUrl = imageUrl;
+        this.isImage = isImage;
+        this.sender = sender;
+        this.timestamp = System.currentTimeMillis();
     }
 
-    public String getMessage() {
-        return message;
-    }
+    // Getters and Setters
+    public String getMessage() { return message; }
+    public void setMessage(String message) { this.message = message; }
 
-    public Uri getImageUri() {
-        return imageUri;
-    }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
-    public boolean hasImage() {
-        return imageUri != null;
-    }
+    public long getTimestamp() { return timestamp; }
+    public void setTimestamp(long timestamp) { this.timestamp = timestamp; }
 
-    public boolean hasText() {
-        return message != null && !message.isEmpty();
-    }
+    public String getSender() { return sender; }
+    public void setSender(String sender) { this.sender = sender; }
+
+    public boolean isImage() { return isImage; }
+    public void setImage(boolean image) { isImage = image; }
 }

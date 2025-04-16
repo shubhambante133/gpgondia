@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/home" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -36,9 +39,7 @@
         <activity android:name=".StudentDetailsActivity" android:exported="false" />
         <activity android:name=".NoticeActivity" android:exported="false" />
         <activity android:name=".sportsactivityadmin" android:exported="false" />
-        <activity android:name=".culturaladmin" android:exported="false" />
-        <activity android:name=".placementadmin" android:exported="false" />
-        <activity android:name=".conferenceadmin" android:exported="false" />
+
 
     </application>
 
